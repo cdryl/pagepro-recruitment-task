@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Inner
+   ========================================================================== */
+@mixin inner () {
+	width: 100%;
+	max-width: size(inner, desktop);
+	margin: 0 auto;
+	padding-right: $white-space;
+	padding-left: $white-space;
+
+}
+.l-inner {
+	@include inner;
+}

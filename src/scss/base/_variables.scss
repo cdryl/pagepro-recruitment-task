@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/* Maps
+========================================================================== */
+/*
+    The names and values of variables in maps are just suggestions/random values.
+    Feel free to add new values, modify both the values and/or keys of the items depending on the project and your prefferences.
+    For each map, a functions is defined (in base/_functions.scss).
+    By default, function names are single a singular form of the map's variable name.
+    Eg. To use the "main" color, a getter function "color" is defined.
+    To use it, simply call: color(main).
+*/
+
+$breakpoints: (
+    mobile: 768px,
+    tablet: 1025px,
+    desktop: 1400px,
+);
+$orientations: (
+    portrait: portrait,
+    landscape: landscape,
+);
+$colors: (
+    main:#e6ebf1,
+    white: #ffffff,
+    accent:#465def,
+    footer: #1c2237,
+    footer-accent: #212943,
+    footer-border: rgba(255,255,255,0.06),
+    icon: rgba(255,255,255,0.6),
+    active: rgba(255,255,255,0.12),
+    text: #1c2238,
+    robot-accent: #708efa,
+    text-accent: #838eab,
+    question-input: #525f7f,
+    message-body: #f6f9fc,
+    red: #fb726f,
+    orange: #f8a86b,
+    green: #55efc4
+
+);
+$sizes: (
+    media: 400px,
+    inner: (
+        desktop: calc(1112px + 2em),
+        tablet: 720px,
+        mobile: 320px
+    ),
+);
+
+// Set main font size to body (eg. 12px), then refer to it using rem, eg. secondary: 2rem -> 24px
+$font-sizes: (
+    main: 14px,
+    h1: 3rem,
+    h2: 2rem,
+    h3: 1.5rem,
+    h4: 16px,
+    menu: 15px,
+    small: 10px,
+    quote: 9px
+);
+$font-weights: (
+    bold: bold,
+    medium: 500,
+    normal: normal
+);
+$offsets: (
+    default: 10px,
+    large: 24px,
+    small: 8px
+);
+$fonts: (
+    main: #{'SF Pro Display', Helvetica, Arial, sans-serif}
+);
+$defaults: (
+    border-radius: 4px,
+    line-height: 1.2
+);
+
+/* Standalone variables
+========================================================================== */
+$white-space: 1em;
+$form-control-height: 2rem;

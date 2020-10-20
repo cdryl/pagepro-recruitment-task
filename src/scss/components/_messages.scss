@@ -1,0 +1,355 @@
+.messages {
+	margin-top: offset(default) * 3;
+	margin-bottom: offset(default) * 5;
+
+	&__items {
+		display: -ms-grid;
+		display: grid;
+
+		gap: 0 20px;
+		-ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&__item {
+		padding: (offset(default) * 2) (offset(default) * 2) (offset(default) * 1.5) (offset(default) * 2);
+
+		-webkit-transition: opacity 0.5s ease,
+		-webkit-transform 0.5s ease;
+
+		transition: opacity 0.5s ease,
+		-webkit-transform 0.5s ease;
+
+		-o-transition: opacity 0.5s ease,
+		transform 0.5s ease;
+
+		transition: opacity 0.5s ease,
+		transform 0.5s ease;
+
+		transition: opacity 0.5s ease,
+		transform 0.5s ease,
+		-webkit-transform 0.5s ease;
+
+		color: color(question-input);
+		border: none;
+		border-radius: 3px;
+		outline: none;
+		background-color: color(white);
+		-webkit-box-shadow: 0 5px 8px 2px rgba(0,0,0,0.1);
+		box-shadow: 0 5px 8px 2px rgba(0,0,0,0.1);
+
+		font-size: font-size(main);
+	}
+
+	@include media(0, tablet) {
+		&__items {
+			gap: 20px 0;
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			-ms-grid-rows: minmax(0, auto) 20px minmax(0, auto) 20px minmax(0, auto);
+			grid-template-rows: repeat(3, minmax(0, auto));
+		}
+	}
+}
+
+.item {
+	&__question {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+
+		width: calc(100% + 40px);
+		margin-left: -20px;
+		padding: (offset(default) * 0.5) (offset(default) * 2) (offset(default) * 2.5) (offset(default) * 2) ;
+
+		border-bottom: 1px solid color(main);
+
+		svg {
+			width: 35px;
+			height: 20px;
+
+			fill: color(red);
+		}
+
+		p {
+			margin-left: offset(default);
+
+			color: color(text);
+
+			font-size: font-size(main);
+
+			-webkit-margin-after: 0;
+
+			        margin-block-end: 0;
+			-webkit-margin-before: 0;
+			        margin-block-start: 0;
+		}
+	}
+
+	&__body {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+
+		width: calc(100% + 40px);
+		margin-left: -20px;
+		padding: offset(default) * 2;
+
+		border-bottom: 1px solid color(main);
+		background-color: color(message-body);
+	}
+
+	&__select {
+		position: relative;
+
+		margin-bottom: offset(default) * 1.5;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: 40px;
+
+			width: 2px;
+			height: 46px;
+
+			content: '';
+			pointer-events: none;
+
+			background: color(main);
+		}
+
+		.select {
+			width: 100%;
+			padding: (offset(default) * 1.5) 0 (offset(default) * 1.5) offset(default);
+
+			cursor: pointer;
+
+			color: color(question-input);
+			border: none;
+			border-radius: 3px;
+			outline: none;
+			background-color: color(white);
+			-webkit-box-shadow: 0 5px 8px 2px rgba(0,0,0,0.1);
+			box-shadow: 0 5px 8px 2px rgba(0,0,0,0.1);
+
+			font-size: font-size(main);
+
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+
+		.custom-arrows {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+
+			pointer-events: none;
+
+
+			.arrow {
+				display: block;
+
+				width: 8px;
+				height: 6px;
+
+				transform: scale(1.3);
+
+				fill: color(text-accent);
+			}
+
+			.arrow-down {
+				margin-top: offset(default) / 2.5;
+
+				-webkit-transform: rotate(180deg) scale(1.3);
+				-ms-transform: rotate(180deg) scale(1.3);
+				transform: rotate(180deg) scale(1.3);
+			}
+		}
+	}
+
+	&__conversation {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+
+		margin-left: auto;
+
+		a {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+
+			&:hover > span {
+				color: darken(color(text-accent), 30%);
+			}
+			&:hover > svg {
+				fill: darken(color(text-accent), 30%);
+			}
+		}
+
+		span {
+			margin-right: offset(default) / 2 ;
+
+			text-decoration: underline;
+
+			color: color(text-accent);
+
+			font-size: font-size(main);
+
+			@include transition;
+
+			&:hover {
+				color: darken(color(text-accent), 30%);
+			}
+		}
+
+		svg {
+			width: 14px;
+			height: 12px;
+
+			fill: color(text-accent);
+
+			@include transition;
+		}
+
+		button {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+
+			margin-left: offset(default);
+			padding: (offset(default) * 0.8) offset(default);
+
+			cursor: pointer;
+
+			color: color(white);
+			border: none;
+			border-radius: 3px;
+			outline: none;
+			background: color(accent);
+
+			font-size: font-size(main);
+
+			@include transition;
+
+			&:hover {
+				background: darken(color(accent), 10%);
+			}
+
+			svg {
+				width: 20px;
+				height: 18px;
+				margin-left: offset(default) / 2;
+
+				-webkit-transform: scale(0.8);
+
+				    -ms-transform: scale(0.8);
+
+				        transform: scale(0.8);
+				-webkit-transform-origin: 50% 50%;
+				    -ms-transform-origin: 50% 50%;
+				        transform-origin: 50% 50%;
+
+				fill: color(robot-accent);
+			}
+		}
+	}
+
+	&__publish {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+
+		margin-top: offset(default) * 1.5;
+
+		p {
+			color: color(text-accent);
+
+			font-size: font-size(main);
+
+			-webkit-margin-after: 0;
+
+			        margin-block-end: 0;
+			-webkit-margin-before: 0;
+			        margin-block-start: 0;
+		}
+
+		span {
+			color: color(red);
+		}
+
+		button {
+			cursor: pointer;
+
+			border: none;
+			outline: none;
+			background: transparent;
+
+
+			svg {
+				width: 13px;
+				height: 14px;
+
+				fill: color(text-accent);
+
+				@include transition;
+			}
+		}
+
+		button:hover > svg {
+			fill: color(red);
+		}
+	}
+}
+
+
+
+
+#item-2 {
+	.item__publish span {
+		color: color(orange);
+	}
+}
+
+#item-3 {
+	height: 120px;
+	.item__publish span {
+		color: color(orange);
+	}
+}
+
+.remove {
+	display: none;
+}
+
+.animation {
+	-webkit-transform: scale(0);
+	    -ms-transform: scale(0);
+	        transform: scale(0);
+
+	opacity: 0;
+}
+

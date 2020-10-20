@@ -1,0 +1,148 @@
+.questions {
+	margin-top: offset(default) * 3;
+
+	&__title {
+		color: color(text);
+
+		font-size: font-size(h4);
+		font-weight: font-weight(normal);
+
+		-webkit-margin-after: offset(default);
+		margin-block-end: offset(default);
+	}
+
+	&__subtitle {
+		margin: 0;
+
+		color: color(text-accent);
+
+		font-size: font-size(main);
+		font-weight: font-weight(normal);
+	}
+
+	&__inputs {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+
+		margin-top: offset(default) * 2.5;
+	}
+
+
+
+	&__select {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: 27px;
+
+			width: 2px;
+			height: 36px;
+
+			content: '';
+
+			background: color(main);
+		}
+
+		.select {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+
+		.custom-arrows {
+			position: absolute;
+			top: 12px;
+			right: 10px;
+
+			pointer-events: none;
+
+
+			.arrow {
+				display: block;
+
+				width: 8px;
+				height: 5px;
+
+				fill: color(text-accent);
+			}
+
+			.arrow-down {
+				margin-top: offset(default) / 2.5;
+
+				-webkit-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__search {
+		position: relative;
+
+		margin-left: offset(default);
+
+		input[type=text] {
+			padding: offset(default) (offset(default) * 5) offset(default) (offset(default) * 4);
+
+			cursor: text;
+
+			color: color(text-accent);
+		}
+
+		::-webkit-input-placeholder {
+			color: color(text-accent);
+		}
+
+		::-moz-placeholder {
+			color: color(text-accent);
+		}
+
+		:-ms-input-placeholder {
+			color: color(text-accent);
+		}
+
+		::-ms-input-placeholder {
+			color: color(text-accent);
+		}
+
+		::placeholder {
+			color: color(text-accent);
+		}
+
+		.search-icon {
+			position: absolute;
+			top: 12px;
+			left: 15px;
+
+			svg {
+				width: 12px;
+				height: 12px;
+
+				fill: color(text-accent);
+			}
+		}
+	}
+
+	.input {
+		padding: offset(default) (offset(default) * 6) offset(default) offset(default);
+
+		cursor: pointer;
+
+		color: color(question-input);
+		border: none;
+		border-radius: 3px;
+		outline: none;
+		background-color: color(white);
+		-webkit-box-shadow: 0 5px 8px 2px rgba(0,0,0,0.1);
+		box-shadow: 0 5px 8px 2px rgba(0,0,0,0.1);
+
+		font-size: font-size(main);
+	}
+
+	@include media(0, tablet) {
+		margin-top: offset(default) * 8;
+	}
+}
