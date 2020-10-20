@@ -1,18 +1,13 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 /* ==========================================================================
    Footer
    ========================================================================== */
    .footer {
 	width: 100%;
-	padding: (offset(default) * 1.5) 0 (offset(default) * 4);
+	padding: (offset(default) * 1.5) 0;
 
 	background-color: color(footer);
+
+	height: 75%;
 
 	&__title {
 		font-size: font-size(h4);

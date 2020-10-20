@@ -6,8 +6,6 @@
 }
 
 body {
-	overflow: hidden;
-
 	background-color: color(main);
 
 	@include media(0, tablet) {
