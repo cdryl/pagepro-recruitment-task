@@ -65,7 +65,7 @@
         <nav class="hamburger">
             <div class="l-inner">
                 <button class="hamburger__btn">
-                    <div class="hamburger__icon"></div>
+                    <span class="hamburger__icon"></span>
                 </button>
             </div>       
         </nav>

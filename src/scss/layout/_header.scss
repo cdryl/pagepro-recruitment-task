@@ -347,7 +347,7 @@
 
 		cursor: pointer;
 
-		padding: 10px;
+		padding: (offset(default) * 2) 0 (offset(default) * 2) (offset(default) * 2);
 
 		&:hover .hamburger__icon::before, &:hover .hamburger__icon::after {
 			background: color(white);
@@ -356,11 +356,11 @@
 	}
 
 	&__icon {
+		display: block;
 		position: relative;
 		width: 25px;
 		height: 2px;
 		background: color(icon);
-		border-radius: 50px;
 
 		-webkit-transition: all 0.3s ease-in-out;
 
